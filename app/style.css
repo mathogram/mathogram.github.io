@@ -1,0 +1,325 @@
+root{
+    font-size:18px;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-family:gotham, arial;
+    font-size:2rem;
+    margin:0;
+}
+h3{
+    font-family:gotham, arial;
+    font-size:1.2rem;
+    font-weight:500;
+    margin:1rem 0;
+}
+
+div.header{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+    padding:2rem 1rem 0.5rem 1rem;
+    height:4.5rem;
+    width:100%;
+    box-sizing:border-box;
+    background-color:white;
+}
+
+main{
+    margin: 5rem 0 4rem 0;
+    padding:0 1rem 4rem 1rem;
+    box-sizing:border-box;
+}
+
+.float{
+    box-shadow: 0 0.25rem 0.5rem #0000005e !important;
+}
+
+
+.card__title{
+    font-family:arial;
+    font-weight:bold;
+    color:white;
+    font-size:18px;
+}
+
+.card__title {
+    z-index: 4;
+}
+
+.card__subhead{
+    font-family:arial;
+    color:white;
+    font-size:10px;
+}
+
+.mdc-card{
+    height:9rem;
+    position:relative;
+}
+
+.cover__text{
+    position:absolute;
+    z-index:1;
+}
+.cover{
+    width:100%;
+    height:100%;
+    background-color:chocolate !important;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(70%) blur(.8px);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.a1, .a2{
+	overflow: hidden;
+	border-collapse: separate; 
+	border-radius: 4px;
+}
+.a1 .cover{
+    background-image: url(topics/power-of-point/title.JPEG);
+    background-position:0 -250px;
+    }
+.a2 .cover{
+    background-image: url(topics/viet-theorem/title.JPEG);
+    background-position:0 -250px;
+}
+
+.topic__list{
+    overflow-x:visible;
+	white-space: nowrap;
+    overflow-y:hidden;
+}
+
+.topic{
+    display:inline-block;
+    margin:0 0.5rem 0.5rem 0;
+}
+
+.topic img{
+    border-radius:4px;
+    width:6rem;
+    height:10rem;
+    margin-bottom:0.5rem;
+}
+
+.topic .topic__title, .topic .topic__subhead{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width:6rem; 
+    white-space: nowrap;
+}
+
+.topic .topic__title{
+    font:bold 12px arial;
+}
+.topic .topic__subhead{
+    font:9px arial;
+}
+
+
+.topic__slider{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:100vh;
+    left:0;
+    background-color:rgb(255, 255, 255);
+    z-index:2;
+    display:block;
+    padding:1rem 0.75rem 0.75rem 0.75rem;
+    box-sizing:border-box;
+
+    transition:top 500ms ease-in-out;
+    overflow-y:scroll;
+}
+.topic__slider img{
+    width:15rem;
+    height:calc(5/3 * 15rem);
+    border-radius:0.5rem;
+}
+.topic__slider h3, .topic__slider p.author, .topic__slider p.series{
+    font-family:gotham, arial;
+    margin:0.25rem;
+}
+.topic__slider h3{
+    font-weight:bold;
+}
+.topic__slider p.series{
+    font-size:0.8rem;
+}
+.topic__slider p.author{
+    font-size:0.8rem;
+    color:#b3b3b3;
+}
+
+.topic__slider .slider__preview{
+    margin: 2rem 0 0rem 0;
+    padding:0 0.5rem;
+    box-sizing:border-box;
+}
+.topic__slider .slider__preview p{
+    margin: 0.5rem 0;
+    font-family:"cm", 'Times New Roman', Times, serif;
+    font-size:1rem;
+}
+.topic__slider .slider__preview h3{
+    margin: 0;
+}
+
+
+.content__card{
+    height:2.9rem;
+    font:500 0.9rem "arial";
+    background-color:#f2f2f2 !important;
+    padding:0;
+}
+.content__card .back{
+    float:right !important;
+}
+
+
+
+.content__slider{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:100vh;
+    left:0;
+    background-color:rgb(255, 255, 255);
+    z-index:3;
+    display:block;
+    padding:1rem 0.75rem 3rem 0.75rem;
+    box-sizing:border-box;
+
+    transition:top 500ms ease-in-out;
+    overflow-y:scroll;
+}
+.content__slider .navbar{
+    position:absolute;
+    top:0.75;
+    left:0;
+    padding:0 0.75rem;
+    height:2rem;
+    width:100%;
+    border-bottom:1px solid #80808052;
+}
+.content__slider .navbar .back{
+    display:inline-block;
+}
+.content__slider .navbar div{
+    float:right; 
+    text-align:right;
+    font-size:0.7rem;
+    font-family:"cm";
+    font-weight:lighter;
+}
+.content__slider .navbar div .author{
+    color:#808080bf;
+}
+
+.content__slider .navbar div .topic{
+    font-weight:bold;
+}
+
+.content__panel{
+    margin-top:2.5rem;
+    font-family:"cm", 'Times New Roman', Times, serif;
+    text-align:justify;
+	max-width:calc(100% - 1.5rem);
+
+	hyphens:auto;
+}
+.content__panel img{
+	max-width:calc(100% - 3rem);
+}
+.content__panel ol, ul{
+	/* counter-reset: marker-count; */
+	padding-inline-start: 2rem;
+}
+.content__panel ul{
+	content: "•";
+}
+.content__panel li{
+	margin:1rem 0;
+}
+.content__panel li::marker{
+	font-weight: bold;
+}
+
+
+.loading{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(255, 255, 255, 1);
+    z-index:2;
+    align-content: center;
+    display:flex;
+    transition: opacity 200ms ease-in-out;
+    
+    /* display: none; */
+}
+
+.loading img{
+    width:5rem;
+	margin: auto;
+	animation: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite rotate;
+}
+
+
+@keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); }  }
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media only screen and (min-width: 800px) {
+	.a1 .cover{
+		background-image: url(topics/power-of-point/title_.jpg);
+		background-position:0 25%;
+		}
+	.a2 .cover{
+		background-image: url(topics/viet-theorem/title_.jpg);
+		background-position:0 50%;
+	}
+	:root{
+		--width:50vw;
+		--padd:calc((100vw - var(--width))/2);
+	}
+
+	main{
+		width:var(--width);
+		margin:5rem var(--padd) 0 var(--padd) ;
+		padding: 0 !important;
+	}
+	.header{
+		padding:2rem var(--padd) 1rem var(--padd) !important;
+	}
+	.nav{
+		width:calc(var(--width) + 1rem) !important;
+		left: calc(var(--padd) - 0.5rem);
+		right: calc(var(--padd) - 0.5rem);
+	}
+	
+	.topic__slider, .content__slider{
+		width:calc(var(--width) + 1rem);
+		left: calc(var(--padd) - 0.5rem);
+		margin:0;
+	}
+}

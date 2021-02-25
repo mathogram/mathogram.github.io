@@ -1,0 +1,41 @@
+@font-face{
+      font-family: gotham;
+      src: url(gotham.otf);
+}
+
+@font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-Regular.otf");
+    font-weight: normal; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-Italic.otf");
+    font-weight: normal; 
+    font-style: italic;
+}
+/* @font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-Book.otf");
+    font-weight: lighter; 
+    font-style: normal;
+} */
+@font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-BookItalic.otf");
+    font-weight: lighter; 
+    font-style: italic;
+}
+@font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-Bold.otf");
+    font-weight: bold; 
+    font-style: normal;
+}
+@font-face {
+    font-family: "cm"; 
+    src: url("https://olymp.nomomon.repl.co/fonts/cm2/NewCM10-BoldItalic.otf");
+    font-weight: bold; 
+    font-style: italic;
+}

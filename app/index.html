@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <title>Mathogram</title>
+    
+    <link rel="icon" href="/icon.svg">
+    
+    <link href="/style.css" rel="stylesheet"></link>
+    <link href="/nav.css" rel="stylesheet"></link>
+    <link href="/fonts.css" rel="stylesheet" defer></link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <link href="/mdc.css" rel="stylesheet"></link>
+
+
+	<link rel="apple-touch-icon" href="/icons/180.png">
+	<meta name="apple-mobile-web-app-status-bar" content="#FFF">
+    <meta name="theme-color" content="#FFF" >
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="noselect">
+
+    <div class="header">
+        <h1>Узнавай</h1>
+    </div>
+    <main>
+        <div class="mdc-card float a1 topic__card" value="power-of-point">
+            <div class="mdc-card-wrapper__text-section cover__text">
+                <div class="card__title">Степень Точки</div>
+                <div class="card__subhead">Геометрия</div>
+            </div>
+            <div class="cover">
+            </div>
+        </div>
+        
+        <div class="mdc-card float a2 topic__card" value="viet-theorem">
+            <div class="mdc-card-wrapper__text-section cover__text">
+                <div class="card__title">Теорема Виета</div>
+                <div class="card__subhead">Алгебра, Многочлены</div>
+            </div>
+            <div class="cover">
+            </div>
+        </div>
+    </main>
+    
+    <nav class="nav">
+      <a href="/" class="nav__link nav__link--active">
+        <i class="material-icons-outlined nav__icon">menu_book</i>
+        <span class="nav__text">Узнавай</span>
+      </a>
+      <a href="/library" class="nav__link">
+        <i class="material-icons-outlined nav__icon">library_books</i>
+        <span class="nav__text">Библиотека</span>
+      </a>
+      <a href="/search" class="nav__link">
+        <i class="material-icons-outlined nav__icon">search</i>
+        <span class="nav__text">Поиск</span>
+      </a>
+      <a href="/account" class="nav__link">
+        <i class="material-icons-outlined nav__icon">person</i>
+        <span class="nav__text">Аккаунт</span>
+      </a>
+    </nav>
+
+    <div class="topic__slider">
+        <i class="material-icons-outlined close">close</i>
+<!--         <i class="material-icons-outlined share side">share</i>
+        <i class="material-icons-outlined download side">file_download</i> -->
+        <center>
+            <img src="/topics/power-of-point/title.JPEG" class="float"/>
+            <p class="series"></p>
+            <h3></h3>         
+            <p class="author"></p>  
+        </center>
+    
+        <div class="slider__preview">
+            <h3>Превью</h3>
+            <p></p>
+        </div>
+        <div class="slider__content">
+            <h3>Содержание</h3>
+            <div></div>
+        </div>
+    </div>
+
+
+    <div class="content__slider" lang="ru">
+            <nav class="navbar">
+                <i class="material-icons-outlined back">chevron_left</i>
+                <div>
+                    <span class="title"></span> <br>
+                    <span class="author"></span>
+                </div>
+            </nav>
+            <div class="content__panel">
+                 
+            </div>
+    </div>
+
+    <div class="loading">
+		<img src="/icon.svg"/>
+    </div>
+
+    <script>
+        window.addEventListener("load", ()=>{
+            document.querySelector(".loading").style.opacity = 0;
+			setTimeout(()=>{
+				document.querySelector(".loading").style.display = "none";
+			}, 200)
+
+        })
+    </script>
+    <script>
+        if('serviceWorker' in navigator){
+			navigator.serviceWorker.register('/sw.js')
+				.then(reg => console.log('service worker registered'))
+				.catch(err => console.log('service worker not registered', err));
+		}
+    </script>
+
+
+<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyDaCcN_m4v0voxufY1icEeXg4UB7JxYLC4",
+			authDomain: "math-f15ff.firebaseapp.com",
+			databaseURL: "https://math-f15ff.firebaseio.com",
+			projectId: "math-f15ff",
+			storageBucket: "math-f15ff.appspot.com",
+			messagingSenderId: "441322745830",
+			appId: "1:441322745830:web:d61ab0215cce860c72f027",
+			measurementId: "G-Z8E3MG7K7G"
+		};
+
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // to prevent errors with time stamps
+        db.settings({timestampsInSnapshots: true})
+    </script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+    <link rel="stylesheet" href="/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+
+	<script src="auth.js"></script>
+    <script defer src="/topics.js"></script>
+    <script defer src="/script.js"></script>
+</body>
+
+</html>
