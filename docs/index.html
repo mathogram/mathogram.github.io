@@ -106,13 +106,20 @@
     </div>
 
     <script>
-        window.addEventListener("load", ()=>{
-            document.querySelector(".loading").style.opacity = 0;
-			setTimeout(()=>{
-				document.querySelector(".loading").style.display = "none";
-			}, 200)
+		(function(){
+			let t1 = performance.now(); 
+			window.addEventListener("load", ()=>{
+				let t2 = performance.now();
 
-        })
+				console.log(t2 - t1)
+
+				document.querySelector(".loading").style.opacity = 0;
+				setTimeout(()=>{
+					document.querySelector(".loading").style.display = "none";
+				}, (t2-t1 < 500)? 100 : 200)
+			})
+		})();
+		
     </script>
     <script>
         if('serviceWorker' in navigator){
