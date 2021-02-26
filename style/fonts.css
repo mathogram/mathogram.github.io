@@ -1,41 +1,41 @@
 @font-face{
       font-family: gotham;
-      src: url("fonts/gotham.otf");
+      src: url("/fonts/gotham.otf");
 }
 
 @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-Regular.otf");
+    src: url("/fonts/cm-Regular.otf");
     font-weight: normal; 
     font-style: normal;
 }
 @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-Italic.otf");
+    src: url("/fonts/cm-Italic.otf");
     font-weight: normal; 
     font-style: italic;
 }
 /* @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-Book.otf");
+    src: url("/fonts/cm-Book.otf");
     font-weight: lighter; 
     font-style: normal;
 } */
 @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-BookItalic.otf");
+    src: url("/fonts/cm-BookItalic.otf");
     font-weight: lighter; 
     font-style: italic;
 }
 @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-Bold.otf");
+    src: url("/fonts/cm-Bold.otf");
     font-weight: bold; 
     font-style: normal;
 }
 @font-face {
     font-family: "cm"; 
-    src: url("fonts/cm-BoldItalic.otf");
+    src: url("/fonts/cm-BoldItalic.otf");
     font-weight: bold; 
     font-style: italic;
 }

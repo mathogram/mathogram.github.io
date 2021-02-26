@@ -1,0 +1,91 @@
+
+.markdown a{
+    text-decoration: none;
+    color:#7d64d2;
+}
+
+.markdown strong, .markdown i{
+	text-align: left !important;
+	word-spacing: 0.1em !important;
+}
+
+.markdown p{
+	/* max-width:100%; */
+	text-align: justify;
+}
+
+.markdown li::marker{
+	font-weight: bold;
+}
+.markdown pre{
+    background-color: rgb(230, 230, 230);
+    border-radius:5px;
+    padding:5px;
+    font-size: 14px;
+}
+.markdown code{
+    word-break: break-word;
+}
+.markdown blockquote{
+    padding: 0 0 0 60px;
+    border-left-width: 0;
+    font-size: 14px;
+    font-weight: 600 !important;
+    position: relative;
+    text-align: left;
+    margin:1em;
+}
+.markdown blockquote:before{
+    content: '“';
+    /* content: "”"; */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 40px;
+    line-height: 0;
+    margin-top: 6px;
+    margin-left: 0px;
+    color: inherit;
+}
+.markdown blockquote::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    bottom: 0;
+    width: 2px;
+    background-color: #886ce4;
+}
+.markdown hr{
+    height: 1px;
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    color: #333;
+    text-align: center;
+}
+.markdown hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+
+.markdown table { 
+    border-collapse: collapse; 
+}
+.markdown tr{
+    border-bottom: solid 0.3px black; 
+}
+.markdown th:nth-child(even), td:nth-child(even) {
+    border-left: solid 0.3px black;
+}
+.markdown td, th{
+    padding:0.5rem;
+}

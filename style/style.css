@@ -83,11 +83,11 @@ main{
 	border-radius: 4px;
 }
 .a1 .cover{
-    background-image: url(topics/power-of-point/title.JPEG);
+    background-image: url(/topics/power-of-point/title.JPEG);
     background-position:0 -250px;
     }
 .a2 .cover{
-    background-image: url(topics/viet-theorem/title.JPEG);
+    background-image: url(/topics/viet-theorem/title.JPEG);
     background-position:0 -250px;
 }
 
@@ -136,7 +136,7 @@ main{
     padding:1rem 0.75rem 0.75rem 0.75rem;
     box-sizing:border-box;
 
-    transition:top 500ms ease-in-out;
+    transition:top 200ms ease-in-out;
     overflow-y:scroll;
 }
 .topic__slider img{
@@ -198,7 +198,7 @@ main{
     padding:1rem 0.75rem 3rem 0.75rem;
     box-sizing:border-box;
 
-    transition:top 500ms ease-in-out;
+    transition:top 200ms ease-in-out;
     overflow-y:scroll;
 }
 .content__slider .navbar{
@@ -291,11 +291,11 @@ main{
 
 @media only screen and (min-width: 800px) {
 	.a1 .cover{
-		background-image: url(topics/power-of-point/title_.jpg);
+		background-image: url(/topics/power-of-point/title_.jpg);
 		background-position:0 25%;
 		}
 	.a2 .cover{
-		background-image: url(topics/viet-theorem/title_.jpg);
+		background-image: url(/topics/viet-theorem/title_.jpg);
 		background-position:0 50%;
 	}
 	:root{
