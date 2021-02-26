@@ -1,3 +1,15 @@
+.markdown .anchor{
+	display: none;
+	margin-left: -28px;
+	float: left;
+}
+.markdown .anchor span{
+	transform: rotate(-45deg);
+}
+.markdown :is(h1, h2, h3, h4, h5, h6):hover .anchor{
+	display: inline;
+}
+
 
 .markdown a{
     text-decoration: none;

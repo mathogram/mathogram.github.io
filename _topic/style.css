@@ -166,6 +166,7 @@ img {
     vertical-align: top;
 }
 .detail_header .action li {
+	cursor:pointer;
 	list-style:none;
     float: left;
     margin: 0 6px;
